@@ -1,0 +1,17 @@
+# 打包zip（用于Chrome商店上传）
+*.zip
+
+# OS 系统文件
+.DS_Store
+Thumbs.db
+
+# VSCode
+.vscode/
+*.code-workspace
+
+# JetBrains IDE
+.idea/
+*.iml
+
+# log
+*.log

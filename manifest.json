@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "悬浮记事本",
+  "version": "1.2.8",
+  "description": "悬浮记事本：多域名共用一次登录，关闭浏览器后再开需重新登录。",
+  "permissions": ["storage", "activeTab", "scripting"],
+  "host_permissions": ["http://*/*", "https://*/*"],
+  "action": {
+    "default_title": "打开/关闭悬浮记事本",
+    "default_icon": {
+
+    }
+  },
+  "icons": {
+
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}
